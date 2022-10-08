@@ -37,8 +37,7 @@ export default {
     // DELETE yêu cầu xóa người dùng
     async deleteUser() {
       console.log('1223')
-      await deleteemployeeAPI.deleteEmployee(this.idDelete)
-      .then(()=> {
+      await deleteemployeeAPI.deleteEmployee(this.idDelete).then(()=> {
         this.$router.push("/userstable");
         this.$router.go("/userstable");
       })

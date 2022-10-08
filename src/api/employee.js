@@ -1,8 +1,8 @@
 import request from '..//untils/request'
 
 export default {
-    listEmployee() {
-        return request({method: 'GET', url: '/employee'})
+    listEmployee(data) {
+        return request({method: 'GET', url: '/employee', params:data})
     },  
 
     listDepartment() {
@@ -14,22 +14,26 @@ export default {
     },
 
     showEmployee(id) {
-        return request({method: 'GET', url: `/employee/${id}`, data: id})
+        return request({method: 'GET', url: `/employee/${id}`})
     },
 
     deleteEmployee(id) {
         return request({method: 'DELETE', url: `/employee/${id}`})
     },
 
-    editEmployee(id){
-        return request({method: 'POST', url: `/employee/${id}`})
+    editEmployee(id, data) {
+        return request({method: 'POST', url: `/employee/${id}`, data: data })
     },
 
-    addEmployee(id){
-        return request({method: 'POST', url: '/employee', data: id})
+    addEmployee(data) {
+        return request({method: 'POST', url: '/employee', data: data})
     },
 
-    apiProfile(apiprofile){
-        return request({method: 'GET', url: '/profile', data: apiprofile})
+    apiProfile() {
+        return request({method: 'GET', url: '/profile'})
+    },
+
+    apiListImages(data) {
+        return request({method: 'POST', url: '/image', data: data} )
     }
 }

@@ -2,8 +2,6 @@ import Vue from 'vue'
 
 import Vuex from "vuex"
 
-import router from '../router/routers'
-
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -14,7 +12,7 @@ export default new Vuex.Store({
 
     },
     mutations: {
-        setUserProfile(state, val, authState) {
+        setUserProfile(state, val) {
             state.isAuthenticated = !state.isAuthenticated
             state.userProfile = val
         }

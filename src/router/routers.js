@@ -3,8 +3,10 @@ import Register from "../views/Register.vue";
 import Login from '../views/Login.vue';
 import Router from "vue-router";
 import Vue from 'vue'
+//import Profile from '..//store/Profile'
 Vue.use(Router)
-const routes = [{
+const routes = [
+    {
         name: "UsersTable",
         component: UsersTable,
         path: "/userstable"
@@ -19,6 +21,12 @@ const routes = [{
         component: Login,
         path: "/login",
     },
+    // {
+    //     name: "Profile",
+    //     component: Profile,
+    //     path:"/profile"
+
+    // }
 ];
 const router = new Router({
     mode: 'history',
